@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interview AI Coach</title>
+    <meta name="description" content="AI-powered interview practice with live transcription" />
+    <meta name="author" content="Interview AI Coach" />
+
+    <meta property="og:title" content="Interview AI Coach" />
+    <meta property="og:description" content="Practice interviews with AI assistance and live transcription" />
+    <meta property="og:type" content="website" />
+
+    <script>
+      // Single Page App routing fix for Render/Netlify/Vercel
+      // Handles direct URL access by storing the path and redirecting
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
